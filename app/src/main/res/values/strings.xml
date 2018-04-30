@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WMCtraining</string>
+    <string name="cost">2000</string>
+    <string name="cost2">3000</string>
+    <string name="done">Done</string>
+    <string name="names">Names</string>
+    <string name="who_will_be_taking_this_course">Who will be taking this course</string>
+</resources>

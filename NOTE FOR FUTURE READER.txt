@@ -1,0 +1,14 @@
+In this project I was tasked by a company to make an app which would allow customers to purchase courses without having to call up the office and thus allowing them to
+be purchased at all hours and then the payment process being handled externally due to sponsors needing to get involved and other background procedures. I Learnt a great deal
+through this as I had limited support from lecturers as the project was embarked upon outside term time so various skills such as problem solving were improved.
+
+Ways I could improve this would be to adhere to either the Google or Sun check coding standards and adding in automated tests. Another thing would be to make the code 
+a lot more scalable as it makes it a lot more easier to re-use and is better practice for bigger projects.
+
+Due to unforseen circumstances the app was not continued to the live stage and being placed on the play store.
+
+I hope you enjoy looking at this project and in turn consider my application.
+
+Most Sincerely
+
+Marlowe  

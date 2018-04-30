@@ -1,0 +1,388 @@
+   CheckBox checker = findViewById(R.id.checkBox);
+
+        checker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                final TextInputEditText mNames = mView.findViewById(R.id.etNames);
+                Button mDone = mView.findViewById(R.id.butDone);
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!mNames.getText().toString().isEmpty()) {
+                            Toast.makeText(MainActivity.this,
+                                    "Congrats",
+                                    Toast.LENGTH_SHORT).show();
+                            Log.w("myApp", "no network");
+                        } else {
+                            Toast.makeText(MainActivity.this,
+                                    "Fill empty fields",
+                                    Toast.LENGTH_SHORT).show();
+                            Log.w("myApp", "no networksssss");
+
+                        }
+                    }
+                });
+
+                mBuilder.setView(mView);
+                final AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText ed = findViewById(R.id.editText);
+                        CheckBox checkBox = findViewById(R.id.checkBox);
+                        if (checkBox.isChecked()) {
+                            selection1.add("2000");
+                            selected.add("Children and Young Peoples Workforce 2 " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed.getText().toString() + "\n" + selection1 + "\n" + "---------------" + "\n");
+                            //textView.setText("2000");
+                            Toast.makeText(MainActivity.this, "Price",
+                                    Toast.LENGTH_LONG).show();
+                            dialog.dismiss();
+                        } else {
+                            selection1.remove("2000");
+                            selected.remove("Children and Young Peoples Workforce 2 " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed.getText().toString() + "\n" + selection1 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        }
+
+
+                    }
+                });
+
+            }
+        });
+
+        //NUMBER 2
+        CheckBox checkers = (CheckBox) findViewById(R.id.checkBox5);
+
+
+        checkers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!mNames.getText().toString().isEmpty()) {
+                            Toast.makeText(MainActivity.this,
+                                    "Congrats",
+                                    Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(MainActivity.this,
+                                    "Fill empty fields",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                mBuilder.setView(mView);
+                final AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText ed2 = findViewById(R.id.editText2);
+                        final CheckBox cb2 = (CheckBox) findViewById(R.id.checkBox5);
+                        if (cb2.isChecked()) {
+                            selection2.add("3000");
+                            selected.add("Early Years Educator Level 3" + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed2.getText().toString() + "\n" + selection2 + "\n" + "---------------" + "\n");
+                            //textView.setText("3000");
+                            Toast.makeText(MainActivity.this, "Price",
+                                    Toast.LENGTH_LONG).show();
+                            dialog.dismiss();
+                        } else {
+                            selection2.remove("3000");
+                            selected.remove("Early Years Educator Level 3" + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed2.getText().toString() + selection2 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        }
+                    }
+                });
+
+                    }
+                });
+
+                //number 3
+                CheckBox checker3 = (CheckBox) findViewById(R.id.checkBox6);
+
+
+                checker3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+                        View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                        final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                        final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                        mDone.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                if (!mNames.getText().toString().isEmpty()) {
+                                    Toast.makeText(MainActivity.this,
+                                            "Congrats",
+                                            Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(MainActivity.this,
+                                            "Fill empty fields",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
+                        mBuilder.setView(mView);
+                        final AlertDialog dialog = mBuilder.create();
+                        dialog.show();
+
+                        mDone.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                EditText ed3 = findViewById(R.id.editText3);
+                                final CheckBox cb3 = (CheckBox) findViewById(R.id.checkBox6);
+                                if (cb3.isChecked()) {
+                                    //textView.setText("4000");
+                                    selection3.add("£25");
+                                    selected.add("Management Level 3" + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed3.getText().toString() + "\n" + selection3 + "\n" + "---------------" + "\n");
+                                    Toast.makeText(MainActivity.this, "£25",
+                                            Toast.LENGTH_LONG).show();
+                                    dialog.dismiss();
+                                } else {
+                                    selection3.remove("£25");
+                                    selected.remove("Management Level 3" + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed3.getText().toString() + "\n" + selection3 + "\n" + "---------------" + "\n");
+                                    dialog.dismiss();
+                                }
+                            }
+                        });
+
+                    }
+                });
+
+                //number 4
+                CheckBox checker4 = (CheckBox) findViewById(R.id.checkBox7);
+
+
+                checker4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+                        View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                        final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                        final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                        mDone.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                if (!mNames.getText().toString().isEmpty()) {
+                                    Toast.makeText(MainActivity.this,
+                                            "Congrats",
+                                            Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(MainActivity.this,
+                                            "Fill empty fields",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
+                        mBuilder.setView(mView);
+                        final AlertDialog dialog = mBuilder.create();
+                        dialog.show();
+
+                        mDone.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                EditText ed4 = findViewById(R.id.editText4);
+                                CheckBox cb4 = (CheckBox) findViewById(R.id.checkBox7);
+                                if (cb4.isChecked()) {
+                                    //textView.setText("5000");
+                                    selection4.add("£45");
+                                    selected.add("Management Level 4" + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed4.getText().toString() + "\n" + selection4 + "\n" + "---------------" + "\n");
+                                    Toast.makeText(MainActivity.this, "£45",
+                                            Toast.LENGTH_LONG).show();
+                                    dialog.dismiss();
+                                } else {
+                                    selection4.remove("£45");
+                                    selected.remove("Management Level 4" + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed4.getText().toString() + "\n" + selection4 + "\n" + "---------------" + "\n");
+                                    dialog.dismiss();
+                                }
+                            }
+                        });
+
+                    }
+                });
+
+                //number 4
+                CheckBox checker5 = (CheckBox) findViewById(R.id.checkBox8);
+
+
+                checker5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+                        View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                        final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                        final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                        mDone.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                if (!mNames.getText().toString().isEmpty()) {
+                                    Toast.makeText(MainActivity.this,
+                                            "Congrats",
+                                            Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(MainActivity.this,
+                                            "Fill empty fields",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
+                        mBuilder.setView(mView);
+                        final AlertDialog dialog = mBuilder.create();
+                        dialog.show();
+
+                        mDone.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                EditText ed5 = findViewById(R.id.editText5);
+                                CheckBox cb5 = (CheckBox) findViewById(R.id.checkBox8);
+                                if (cb5.isChecked()) {
+                                    //textView.setText("6000");
+                                    selection5.add("£45");
+                                    selected.add("Management Level 5" + mNames.getText().toString() + "\n" + "Quantity: " + ed5.getText().toString() + "\n" + selection5 + "\n" + "---------------" + "\n");
+                                    Toast.makeText(MainActivity.this, "£45",
+                                            Toast.LENGTH_LONG).show();
+                                    dialog.dismiss();
+                                } else {
+                                    selection5.remove("£45");
+                                    selected.remove("Management Level 5" + mNames.getText().toString() + "\n" + "Quantity: " + ed5.getText().toString() + "\n" + selection5 + "\n" + "---------------" + "\n");
+                                    dialog.dismiss();
+                                }
+
+                            }
+                        });
+
+                    }
+                });
+
+                //number 5
+                CheckBox checker6 = (CheckBox) findViewById(R.id.checkBox9);
+
+
+                checker6.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+                        View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                        final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                        final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                        mDone.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                if (!mNames.getText().toString().isEmpty()) {
+                                    Toast.makeText(MainActivity.this,
+                                            "Congrats",
+                                            Toast.LENGTH_SHORT).show();
+
+
+                                } else {
+                                    Toast.makeText(MainActivity.this,
+                                            "Fill empty fields",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
+                        mBuilder.setView(mView);
+                        final AlertDialog dialog = mBuilder.create();
+                        dialog.show();
+
+                        mDone.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                EditText ed6 = findViewById(R.id.editText7);
+                                CheckBox cb6 = (CheckBox) findViewById(R.id.checkBox9);
+                                if (cb6.isChecked()) {
+                                    //textView.setText("7000");
+                                    selection6.add("£50");
+                                    selected.add("Room Leader/Supervisor Level 3 " + mNames.getText().toString() + "\n" + "Quantity: " + ed6.getText().toString() + "\n" + selection6 + "\n" + "---------------" + "\n");
+                                    Toast.makeText(MainActivity.this, "£50",
+                                            Toast.LENGTH_LONG).show();
+                                    dialog.dismiss();
+                                } else {
+                                    selection6.remove("£50");
+                                    selected.remove("Room Leader/Supervisor Level 3 " + mNames.getText().toString() + "\n" + "Quantity: " + ed6.getText().toString() + "\n" + selection6 + "\n" + "---------------" + "\n");
+                                    dialog.dismiss();
+                                }
+
+
+                            }
+                        });
+
+                    }
+                });
+
+                //number 6
+                CheckBox checker7 = (CheckBox) findViewById(R.id.checkBox10);
+
+
+                checker7.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+                        View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                        final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                        final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                        mDone.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                if (!mNames.getText().toString().isEmpty()) {
+                                    Toast.makeText(MainActivity.this,
+                                            "Congrats",
+                                            Toast.LENGTH_SHORT).show();
+
+
+                                } else {
+                                    Toast.makeText(MainActivity.this,
+                                            "Fill empty fields",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
+                        mBuilder.setView(mView);
+                        final AlertDialog dialog = mBuilder.create();
+                        dialog.show();
+
+                        mDone.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                EditText ed8 = findViewById(R.id.editText8);
+                                CheckBox c7 = (CheckBox) findViewById(R.id.checkBox10);
+                                if (c7.isChecked()) {
+                                    //textView.setText("8000");
+                                    selection7.add("£95");
+                                    selected.add("Deputy/General Manager Level 5 " + mNames.getText().toString() + "\n" + "Quantity: " + ed8.getText().toString() + "\n" + selection7 + "\n" + "---------------" + "\n");
+                                    Toast.makeText(MainActivity.this, "£95",
+                                            Toast.LENGTH_LONG).show();
+                                    dialog.dismiss();
+                                } else {
+                                    selection7.remove("£95");
+                                    selected.remove("Deputy/General Manager Level 5 " + mNames.getText().toString() + "\n" + "Quantity: " + ed8.getText().toString() + "\n" + selection7 + "\n" + "---------------" + "\n");
+                                    dialog.dismiss();
+                                }
+
+                            }
+                        });
+
+                    }
+                });

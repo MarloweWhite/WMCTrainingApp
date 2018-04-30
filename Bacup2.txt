@@ -1,0 +1,543 @@
+//NUMBER 1
+        CheckBox checker2 = (CheckBox) findViewById(R.id.checkBox2);
+
+
+        checker2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(ShortCoursesActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!mNames.getText().toString().isEmpty()) {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Congrats",
+                                    Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Fill empty fields",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                mBuilder.setView(mView);
+                final AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText ed2 = findViewById(R.id.editText6);
+                        CheckBox cb2 = (CheckBox) findViewById(R.id.checkBox2);
+                        if (cb2.isChecked()) {
+                            learners11.add(String.valueOf(mNames));
+                            selection11.add("3000");
+                            selected2.add("Safeguarding " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed2.getText().toString() + "\n" + selection11 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        } else {
+                            learners11.remove(String.valueOf(mNames));
+                            selection11.remove("3000");
+                            selected2.remove("Safeguarding " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed2.getText().toString() + selection11 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        }
+                    }
+                });
+
+            }
+        });
+
+        //number 2
+        CheckBox checker3 = (CheckBox) findViewById(R.id.checkBox3);
+
+
+        checker3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(ShortCoursesActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!mNames.getText().toString().isEmpty()) {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Congrats",
+                                    Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Fill empty fields",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                mBuilder.setView(mView);
+                final AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText ed3 = findViewById(R.id.editText9);
+                        CheckBox cb3 = (CheckBox) findViewById(R.id.checkBox3);
+                        if (cb3.isChecked()) {
+                            learners12.add(String.valueOf(mNames));
+                            selection12.add("4000");
+                            selected2.add("Prevent " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed3.getText().toString() + "\n" + selection12 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        } else {
+                            learners12.remove(String.valueOf(mNames));
+                            selection12.remove("4000");
+                            selected2.remove("Prevent" + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed3.getText().toString() + "\n" + selection12 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        }
+                    }
+                });
+
+            }
+        });
+
+        //number 3
+        CheckBox checker4 = (CheckBox) findViewById(R.id.checkBox4);
+
+
+        checker4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(ShortCoursesActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!mNames.getText().toString().isEmpty()) {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Congrats",
+                                    Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Fill empty fields",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                mBuilder.setView(mView);
+                final AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText ed4 = findViewById(R.id.editText10);
+                        CheckBox cb4 = (CheckBox) findViewById(R.id.checkBox4);
+                        if (cb4.isChecked()) {
+                            learners13.add(String.valueOf(mNames));
+                            selection13.add("5000");
+                            selected2.add("Fire Safety " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed4.getText().toString() + "\n" + selection13 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        } else if (!cb4.isChecked()) {
+                            //when unclicked it restarts dialog cycle
+                            learners13.remove(String.valueOf(mNames));
+                            selection13.remove("5000");
+                            selected2.remove("Fire Safety " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed4.getText().toString() + "\n" + selection13 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        }
+                    }
+                });
+
+            }
+        });
+
+        //number 4
+        CheckBox checker6 = (CheckBox) findViewById(R.id.checkBox6);
+
+
+        checker6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(ShortCoursesActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!mNames.getText().toString().isEmpty()) {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Congrats",
+                                    Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Fill empty fields",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                mBuilder.setView(mView);
+                final AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText ed5 = findViewById(R.id.editText11);
+                        CheckBox cb5 = (CheckBox) findViewById(R.id.checkBox6);
+                        if (cb5.isChecked()) {
+                            learners14.add(String.valueOf(mNames));
+                            selection14.add("6000");
+                            selected2.add("First Aid " + mNames.getText().toString() + "\n" + "Quantity: " + ed5.getText().toString() + "\n" + selection14 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        } else {
+                            learners14.remove(String.valueOf(mNames));
+                            selection14.remove("6000");
+                            selected2.remove("First Aid " + mNames.getText().toString() + "\n" + "Quantity: " + ed5.getText().toString() + "\n" + selection14 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        }
+
+                    }
+                });
+
+            }
+        });
+
+        //number 5
+        CheckBox checker7 = (CheckBox) findViewById(R.id.checkBox7);
+
+
+        checker7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(ShortCoursesActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!mNames.getText().toString().isEmpty()) {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Congrats",
+                                    Toast.LENGTH_SHORT).show();
+
+
+                        } else {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Fill empty fields",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                mBuilder.setView(mView);
+                final AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText ed6 = findViewById(R.id.editText12);
+                        CheckBox cb6 = (CheckBox) findViewById(R.id.checkBox7);
+                        if (cb6.isChecked()) {
+                            learners15.add(String.valueOf(mNames));
+                            selection15.add("7000");
+                            selected2.add("Positive Handling " + mNames.getText().toString() + "\n" + "Quantity: " + ed6.getText().toString() + "\n" + selection15 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        } else {
+                            learners15.remove(String.valueOf(mNames));
+                            selection15.remove("7000");
+                            selected2.remove("Positive Handling " + mNames.getText().toString() + "\n" + "Quantity: " + ed6.getText().toString() + "\n" + selection15 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        }
+
+
+                    }
+                });
+
+            }
+        });
+
+        //number 6
+        CheckBox checker8 = (CheckBox) findViewById(R.id.checkBox8);
+
+
+        checker8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(ShortCoursesActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!mNames.getText().toString().isEmpty()) {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Congrats",
+                                    Toast.LENGTH_SHORT).show();
+
+
+                        } else {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Fill empty fields",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                mBuilder.setView(mView);
+                final AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText ed8 = findViewById(R.id.editText13);
+                        CheckBox c7 = (CheckBox) findViewById(R.id.checkBox8);
+                        if (c7.isChecked()) {
+                            learners16.add(String.valueOf(mNames));
+                            selection16.add("8000");
+                            selected2.add("Food Hygeine " + mNames.getText().toString() + "\n" + "Quantity: " + ed8.getText().toString() + "\n" + selection16 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        } else {
+                            learners16.add(String.valueOf(mNames));
+                            selection16.remove("8000");
+                            selected2.remove("Food Hygeine " + mNames.getText().toString() + "\n" + "Quantity: " + ed8.getText().toString() + "\n" + selection16 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        }
+
+                    }
+                });
+
+            }
+        });
+
+
+        //NUMBER 7
+        CheckBox checker9 = findViewById(R.id.checkBox9);
+
+        checker9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(ShortCoursesActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                final TextInputEditText mNames = mView.findViewById(R.id.etNames);
+                Button mDone = mView.findViewById(R.id.butDone);
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!mNames.getText().toString().isEmpty()) {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Congrats",
+                                    Toast.LENGTH_SHORT).show();
+                            Log.w("myApp", "no network");
+                        } else {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Fill empty fields",
+                                    Toast.LENGTH_SHORT).show();
+                            Log.w("myApp", "no networksssss");
+
+                        }
+                    }
+                });
+
+                mBuilder.setView(mView);
+                final AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText ed = findViewById(R.id.editText14);
+                        CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox9);
+                        if (checkBox.isChecked()) {
+                            learners17.add(String.valueOf(mNames));
+                            selection17.add("2000");
+                            selected2.add("Data handling in care " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed.getText().toString() + "\n" + selection17 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        } else {
+                            learners17.remove(String.valueOf(mNames));
+                            selection17.remove("2000");
+                            selected2.remove("Data handling in care " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed + "\n" + selection17 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        }
+
+
+                    }
+                });
+
+            }
+        });
+
+        //NUMBER 8
+        CheckBox checker10 = (CheckBox) findViewById(R.id.checkBox10);
+
+
+        checker10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(ShortCoursesActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!mNames.getText().toString().isEmpty()) {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Congrats",
+                                    Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Fill empty fields",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                mBuilder.setView(mView);
+                final AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText ed2 = findViewById(R.id.editText15);
+                        CheckBox cb2 = (CheckBox) findViewById(R.id.checkBox10);
+                        if (cb2.isChecked()) {
+                            learners18.add(String.valueOf(mNames));
+                            selection18.add("3000");
+                            selected2.add("Working safely " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed2.getText().toString() + "\n" + selection18 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        } else {
+                            learners18.remove(String.valueOf(mNames));
+                            selection18.remove("3000");
+                            selected2.remove("Working safely " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed2.getText().toString() + selection18 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        }
+                    }
+                });
+
+            }
+        });
+
+        //number 9
+        CheckBox checker11 = (CheckBox) findViewById(R.id.checkBox11);
+
+
+        checker11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(ShortCoursesActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!mNames.getText().toString().isEmpty()) {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Congrats",
+                                    Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Fill empty fields",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                mBuilder.setView(mView);
+                final AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText ed3 = findViewById(R.id.editText16);
+                        CheckBox cb3 = (CheckBox) findViewById(R.id.checkBox11);
+                        if (cb3.isChecked()) {
+                            learners19.add(String.valueOf(mNames));
+                            selection19.add("4000");
+                            selected2.add("Equality, Diversity and Inclusion  " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed3.getText().toString() + "\n" + selection19 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        } else {
+                            learners19.remove(String.valueOf(mNames));
+                            selection19.remove("4000");
+                            selected2.remove("Equality, Diversity and Inclusion  " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed3.getText().toString() + "\n" + selection19 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        }
+                    }
+                });
+
+            }
+        });
+
+        //number 10
+        CheckBox checker12 = (CheckBox) findViewById(R.id.checkBox12);
+
+
+        checker12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(ShortCoursesActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.activity_popup, null);
+                final EditText mNames = (EditText) mView.findViewById(R.id.etNames);
+                final Button mDone = (Button) mView.findViewById(R.id.butDone);
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!mNames.getText().toString().isEmpty()) {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Congrats",
+                                    Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(ShortCoursesActivity.this,
+                                    "Fill empty fields",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                mBuilder.setView(mView);
+                final AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+                mDone.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EditText ed4 = findViewById(R.id.editText17);
+                        CheckBox cb4 = (CheckBox) findViewById(R.id.checkBox12);
+                        if (cb4.isChecked()) {
+                            learners20.add(String.valueOf(mNames));
+                            selection20.add("5000");
+                            selected2.add("Nutrition and Hydration " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed4.getText().toString() + "\n" + selection20 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        } else {
+                            learners20.remove(String.valueOf(mNames));
+                            selection20.remove("5000");
+                            selected2.remove("Nutrition and Hydration " + "\n" + "People taking course: " + mNames.getText().toString() + "\n" + "Quantity: " + ed4.getText().toString() + "\n" + selection20 + "\n" + "---------------" + "\n");
+                            dialog.dismiss();
+                        }
+                    }
+                });
+
+            }
+        });
